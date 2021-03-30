@@ -21,7 +21,7 @@ public class BlackList {
 		if(!check)System.out.println("no place in the blacklist");
 	}
 
-	public void deleteToBlackList(Class<?> a) {
+	public void deleteFromBlackList(Class<?> a) {
 		boolean check=false;
 		for (int i = 0; i < classes.length; i++) {
 			if (classes[i] == a) {
