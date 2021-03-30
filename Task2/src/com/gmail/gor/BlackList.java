@@ -10,22 +10,26 @@ public class BlackList {
 	}
 
 	public void addToBlackList(Class<?> a) {
+		boolean check=false;
 		for (int i = 0; i < classes.length; i++) {
 			if (classes[i] == null) {
 				classes[i] = a;
+				check=true;
 				break;
 			}
 		}
+		if(!check)System.out.println("no place in the blacklist");
 	}
 
 	public void deleteToBlackList(Class<?> a) {
+		boolean check=false;
 		for (int i = 0; i < classes.length; i++) {
 			if (classes[i] == a) {
 				classes[i] = null;
-			}else {
-				System.out.println("no place in the blacklist");
+				check=true;
 			}
 		}
+		if(!check)System.out.println("not found elemetn in BlackList");
 	}
 
 	public boolean verification(Object obj) {
